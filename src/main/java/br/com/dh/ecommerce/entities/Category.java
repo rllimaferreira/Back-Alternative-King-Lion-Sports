@@ -10,23 +10,23 @@ public class Category implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idcategory;
     private String name;
 
     public Category() {
     }
 
-    public Category(Integer id, String name) {
-        this.id = id;
+    public Category(Integer idcategory, String name) {
+        this.idcategory = idcategory;
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdcategory() {
+        return idcategory;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdcategory(Integer idcategory) {
+        this.idcategory = idcategory;
     }
 
     public String getName() {
