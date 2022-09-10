@@ -12,9 +12,11 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idproduct;
     private String title;
     private String description;
+
+    private String brand;
     private String image;
     private Double price;
 
@@ -24,23 +26,30 @@ public class Product implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "category_id"))
     Set<Category> categories = new HashSet<>();
 
+    //Construtores
+
+
     public Product() {
     }
 
-    public Product(Integer id, String title, String description, String image, Double price) {
-        this.id = id;
+    public Product(Integer idproduct, String title, String description, String brand, String image, Double price, Set<Category> categories) {
+        this.idproduct = idproduct;
         this.title = title;
         this.description = description;
+        this.brand = brand;
         this.image = image;
         this.price = price;
+        this.categories = categories;
     }
 
-    public Integer getId() {
-        return id;
+    // Getters and Setters
+
+    public Integer getIdproduct() {
+        return idproduct;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdproduct(Integer idproduct) {
+        this.idproduct = idproduct;
     }
 
     public String getTitle() {
@@ -59,6 +68,14 @@ public class Product implements Serializable {
         this.description = description;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
     public String getImage() {
         return image;
     }
@@ -73,5 +90,13 @@ public class Product implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 }
