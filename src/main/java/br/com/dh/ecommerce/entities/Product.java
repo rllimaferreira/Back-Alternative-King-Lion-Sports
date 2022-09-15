@@ -12,10 +12,9 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idproduct;
+    private Integer id;
     private String title;
     private String description;
-
     private String brand;
     private String image;
     private Double price;
@@ -32,8 +31,8 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Product(Integer idproduct, String title, String description, String brand, String image, Double price, Set<Category> categories) {
-        this.idproduct = idproduct;
+    public Product(Integer id, String title, String description, String brand, String image, Double price, Set<Category> categories) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.brand = brand;
@@ -44,12 +43,12 @@ public class Product implements Serializable {
 
     // Getters and Setters
 
-    public Integer getIdproduct() {
-        return idproduct;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdproduct(Integer idproduct) {
-        this.idproduct = idproduct;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -96,7 +95,4 @@ public class Product implements Serializable {
         return categories;
     }
 
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
-    }
 }
