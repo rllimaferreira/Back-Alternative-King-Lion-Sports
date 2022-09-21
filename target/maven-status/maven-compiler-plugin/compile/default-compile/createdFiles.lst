@@ -1,0 +1,11 @@
+br\com\dh\ecommerce\service\ProductService.class
+br\com\dh\ecommerce\entities\Category.class
+br\com\dh\ecommerce\EcommerceApplication.class
+br\com\dh\ecommerce\repositories\ProductRepository.class
+br\com\dh\ecommerce\service\CategoryService.class
+br\com\dh\ecommerce\controllers\CategoryController.class
+br\com\dh\ecommerce\entities\Product.class
+br\com\dh\ecommerce\controllers\ProductController.class
+br\com\dh\ecommerce\repositories\CategoryRepository.class
+br\com\dh\ecommerce\dtos\ProductDto.class
+br\com\dh\ecommerce\dtos\CategoryDto.class
