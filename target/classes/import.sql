@@ -1,5 +1,6 @@
 -- AQUI TEMOS O SEEDING DE DADOS
 
+
 --Categoria(Category)
 INSERT INTO category (name) VALUES ('Camiseta');
 
