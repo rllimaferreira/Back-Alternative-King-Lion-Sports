@@ -3,7 +3,7 @@ spring:
     activate:
       on-profile: docker
   datasource:
-    url: jdbc:mysql://dbecommerce:3306/ecommerce
+    url: jdbc:mysql://mysql_server_ecommerce:3306/ecommerce
     username: admin
     password: DigitalHouse2022
     initialize: false
